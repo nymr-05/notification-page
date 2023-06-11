@@ -216,11 +216,13 @@
   <script>
     var noti = document.getElementsByClassName('notification');
     var btn = document.querySelector("#read-btn");
+    var badge = document.querySelector(".badge");
     
     function read(){
+      badge.style.display="none";
       for(var i=0; i<=noti.length; i++){
         noti[i].classList.remove('unread');
-      } 
+      }
     }
     btn.addEventListener('click', read);
     
